@@ -25,5 +25,5 @@ sumco1 = np.sum(A,axis = 0)
 sumdia = np.sum(np.dia(A))
 sumflip = np.sum(np.fliplr(A))
 
-if sumrow == sumco1 == sumdia == sumflip:
+if np.min(np.sum(A,axis=1)) == np.max(np.sum(A,axis=1)) == np.min(np.sum(A,axis=0)) == np.max(np.sum(A,axis=0)) == np.sum(A.diagonal()):
                 print('Magic Matrix')
